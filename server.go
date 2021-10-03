@@ -29,9 +29,10 @@ func main() {
 	}
 
 	redisURL := os.Getenv(“REDIS_URL”)
-opt, err := redis.ParseURL(redisURL)
-if err != nil {
- panic(err)
+	opt, err := redis.ParseURL(redisURL)
+	if err != nil {
+ 	panic(err)
+	 
 }
 rdb = redis.NewClient(opt)
 
